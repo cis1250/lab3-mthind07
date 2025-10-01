@@ -29,7 +29,27 @@ def is_sentence(text):
 
     return True
 
+# 1. Prompt the user: Ask the user to enter a sentence.
+# 2. Split the sentence
 user_sentence = input("Enter a sentence: ")
+input_sentence = user_sentence.split(" ")
+
+# Create lists to store words and their corresponding frequencies.
+words = []
+frequencies = []
+
+# 4. Iterate through words and update frequencies
+for word in input_sentence:
+    for i in range(len(words)):
+      if words[i] == word:
+        frequencies[i] = frequencies[i] + 1   
+    else:
+        words = words + [word]
+        frequencies = frequencies + [1]
+
+# Print results
+for i in range(len(words)):
+    print(words[i] + ":", frequencies[i])
 
 while (is_sentence(user_sentence) == False):
     print("This does not meet the criteria for a sentence.")
