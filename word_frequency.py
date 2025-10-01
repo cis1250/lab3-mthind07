@@ -47,7 +47,6 @@ for word in input_sentence:
         words = words + [word]
         frequencies = frequencies + [1]
 
-# Print results
 for i in range(len(words)):
     print(words[i] + ":", frequencies[i])
 
