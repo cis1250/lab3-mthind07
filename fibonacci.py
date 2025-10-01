@@ -5,7 +5,7 @@
 # Prompt the user for the number of terms.
 user_input = input("User input: ")
 
-if user_input.isadigit()
+if user_input.isdigit()
   m = int(user_input)
 # Validate that the input is a positive integer
   if m > 0:
